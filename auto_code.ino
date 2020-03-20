@@ -45,7 +45,7 @@ BLYNK_WRITE(V1)
   {
     digitalWrite(5,HIGH);
     j=j+1;
-    a[j]=F1;
+    a[j]= 8;  //8 is for forward
   }
   else if(i == 0)
   {
@@ -63,7 +63,7 @@ BLYNK_WRITE(V5)
   {
     digitalWrite(6,HIGH);
     j=j+1;
-    a[j]=R1;
+    a[j]= 2;  //2 is for reverse
   }
   else if(i == 0)
   {
@@ -81,7 +81,7 @@ BLYNK_WRITE(V2)
   {
     digitalWrite(7,HIGH);
     j=j+1;
-    a[j]=F2;
+    a[j]= 9; //9 is for forward for second motor
   }
   else if(i == 0)
   {
@@ -99,7 +99,7 @@ BLYNK_WRITE(V3)
   {
     digitalWrite(8,HIGH);
     j=j+1;
-    a[j]=R2;
+    a[j]= 3; //3 reverse for seocnd motor
   }
   else if(i == 0)
   {
@@ -122,19 +122,19 @@ void auto1()
 {
   for(j=0;j<100;j++)
   {
-    if(a[j]==F1)
+    if(a[j]==8)
     {
       digitalWrite(5,HIGH);
     }
-    if(a[j]==R1)
+    if(a[j]==2)
     {
       digitalWrite(6,HIGH);
     }
-    if(a[j]==F2)
+    if(a[j]==9)
     {
       digitalWrite(7,HIGH);
     }
-    if(a[j]==R2)
+    if(a[j]==3)
     {
       digitalWrite(8,HIGH);
     }
